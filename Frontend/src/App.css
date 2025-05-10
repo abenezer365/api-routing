@@ -1,0 +1,76 @@
+.apple-style-body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.apple-style-hero {
+  padding: 60px 20px;
+  text-align: center;
+}
+.arrow{
+  border-radius: 6px;
+  padding: 3px 6px;
+  background-color: #dddddd;
+}
+.arrow::before{
+  font-family: "FontAwesome";
+  font-weight: 500;
+  content: "\f060";
+  padding-right: 10px;
+ 
+}
+.arrow:hover{
+  background-color: #bdbdbd;
+  color: black;
+  transition: 0.5s;
+}
+.apple-style-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.apple-style-subtitle {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.apple-style-product-info h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.apple-style-product-info p {
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.apple-style-product-info a {
+  text-decoration: none;
+  color: #0071e3;
+  font-weight: 500;
+}
+.apple-style-product-info a:hover {
+  text-decoration: underline;
+}
+
+.apple-style-product-image img {
+  width: 100%;
+  max-width: 400px;
+}
+
+.img-single{
+  height: 50vh;
+  width: auto;
+}
+.apple-style-product-image-2 img{
+height: 700px;
+width: auto;
+object-fit: cover;
+}
+.code{
+  color: #ff0000;
+}

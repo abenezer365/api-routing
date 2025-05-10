@@ -1,0 +1,126 @@
+/* Counter Component Styles (Scoped) */
+.counter-container {
+    --primary-color: #4a6bff;
+    --danger-color: #ff4a6b;
+    --success-color: #4aff6b;
+    --text-dark: #2d3748;
+    --text-light: #f8fafc;
+    --transition-speed: 0.3s;
+    
+    max-width: 920px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+  }
+  
+  .counter-value {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 1rem 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .counter-value-real {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin: 1rem 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .counter-value.animated {
+    animation: pulse 0.5s ease;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+  
+  .button-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+  
+  .btn {
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn:active {
+    transform: translateY(2px);
+  }
+  
+  .btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+  }
+  
+  .btn:focus:not(:active)::after {
+    animation: ripple 0.6s ease-out;
+  }
+  
+  @keyframes ripple {
+    0% {
+      transform: scale(0, 0);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(20, 20);
+      opacity: 0;
+    }
+  }
+  
+  .reset {
+    grid-column: span 2;
+    background: #e2e8f0;
+    color: var(--text-dark);
+  }
+  
+  .reset:hover {
+    background: #cbd5e0;
+  }
+  
+  .increment {
+    background: var(--primary-color);
+    color: var(--text-light);
+  }
+  
+  .increment:hover {
+    background: #3a56d4;
+    box-shadow: 0 4px 12px rgba(74, 107, 255, 0.3);
+  }
+  
+  .decrement {
+    background: var(--danger-color);
+    color: var(--text-light);
+  }
+  
+  .decrement:hover {
+    background: #e03a58;
+    box-shadow: 0 4px 12px rgba(255, 74, 107, 0.3);
+  }
