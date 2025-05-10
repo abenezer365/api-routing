@@ -3,18 +3,18 @@
 
 
 # API Key
-AIzaSyBsZWd2qZ-BwWM00QyGG50M7bQ6Zsi2tBw
+.env
 
 ## Test case: *Reqeust Constructor*
 https://www.googleapis.com/youtube/v3/search?key=[API_KEY]&channelId=[CHANNEL_ID]&part=snippet,id&order=date&maxResults=[AMOUNT]
 ### Legend
-- API: AIzaSyBsZWd2qZ-BwWM00QyGG50M7bQ6Zsi2tBw
-- Channel ID: UCE_M8A5yxnLfW0KghEeajjw
+- API: process.env
+- Channel ID: process.env
 - Amount: 12
 
 ### In my case
 
-https://www.googleapis.com/youtube/v3/search?key=AIzaSyBsZWd2qZ-BwWM00QyGG50M7bQ6Zsi2tBw&channelId=UCE_M8A5yxnLfW0KghEeajjw&part=snippet,id&order=date&maxResults=12
+https://www.googleapis.com/youtube/v3/search?key={}channelId=UCE_M8A5yxnLfW0KghEeajjw&part=snippet,id&order=date&maxResults=12
 
 **Steps to find youtube channel id**
 
